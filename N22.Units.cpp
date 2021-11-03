@@ -1,17 +1,18 @@
 #include <iostream>
 using namespace std;
 
+//Program should write how many "1" are in the given number in binary type// 
+
 int main(){
-    int a, division, unit = 0;
+    int a;
     cin >> a;
-    a = a + 1;
-    for(int i = 0; i < a; i++){
-        if(a / 2 != 0){
-            unit++;
-            a = a / division;
+    int units = 0;
+    while(a > 1){
+        if(a % 2 != 0){
+            units++;
         }
-        else{
-            
-        }
+        a = a / 2;
     }
+    cout << units + 1 << endl;
+    return 0;
 }
